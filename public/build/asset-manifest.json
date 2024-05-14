@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Resume/manifest.json/static/css/main.e5b22bf0.css",
+    "main.js": "/Resume/manifest.json/static/js/main.c85acde8.js",
+    "static/media/profile_picture.png": "/Resume/manifest.json/static/media/profile_picture.ab54aa00f18c5a2d4d1c.png",
+    "static/media/CNA.jpg": "/Resume/manifest.json/static/media/CNA.94011e9a9c2a38c9a265.jpg",
+    "index.html": "/Resume/manifest.json/index.html",
+    "main.e5b22bf0.css.map": "/Resume/manifest.json/static/css/main.e5b22bf0.css.map",
+    "main.c85acde8.js.map": "/Resume/manifest.json/static/js/main.c85acde8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e5b22bf0.css",
+    "static/js/main.c85acde8.js"
+  ]
+}
