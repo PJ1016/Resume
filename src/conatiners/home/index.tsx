@@ -1,23 +1,55 @@
 import React from "react";
+import { Stack } from "@mui/material";
 import Card from "../card";
 import CollegeInfo from "../collegeInfo";
 import Experience from "../experience";
+import Skills from "../skills";
 
 const Home = () => {
   return (
-    <>
+    <Stack>
       <Card
         fullName="Praveen jayanth"
-        experience="2+ years React Experience"
-        linkedinURL="https://www.linkedin.com/in/praveen-jayanth-8b0687199"
-        selfDescription="Experienced React developer adept at navigating from '404 Not Found' to '200 OK'"
+        role="Application Devolopment Analyst"
+        socialLinks={[
+          {
+            name: "github",
+            url: "https://github.com/PJ1016/Resume",
+          },
+          {
+            name: "linkedin",
+            url: "https://www.linkedin.com/in/praveen-jayanth-8b0687199",
+          },
+        ]}
+      />
+      <Skills
+        skillSet={[
+          {
+            title: "Frontend Technologies",
+            skills: [
+              "React JS",
+              "Redux",
+              "React Query",
+              "React Forms",
+              "Styled Components",
+              "Typescript",
+              "Jest",
+              "Cypress",
+            ],
+          },
+          {
+            title: "Backend Stack and Tools",
+            skills: ["Python", "SQL", "Git", "Version-one / JIRA"],
+          },
+        ]}
       />
       <Experience />
+
       <CollegeInfo
         branch="Computer Science and Engineering"
         college="Rajiv Gandhi University of Knowledge Technologies, Basar"
       />
-    </>
+    </Stack>
   );
 };
 

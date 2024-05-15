@@ -1,17 +1,12 @@
 import React from "react";
-import profile_picture from "../../profile_picture.png";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { Stack, IconButton } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
 import WorkSummary from "../card/WorkSummary";
-const fadeDown = keyframes`
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-`;
+import profile_picture from "../../profile_picture.png";
+import { fadeDown } from "../../components/Animation";
+
 const ImageWithTextWrapper = styled.div`
   position: relative;
   display: inline-block;
@@ -33,18 +28,13 @@ const Text = styled.span`
 `;
 interface ICard {
   fullName: string;
-  linkedinURL: string;
-  selfDescription: string;
-  experience: string;
+  socialLinks: { name: string; url: string }[];
+  role: string;
 }
-const Card = ({
-  fullName,
-  linkedinURL,
-  selfDescription,
-  experience,
-}: ICard) => {
-  const moveToLinkedIn = () => {
-    window.open(linkedinURL);
+const Card = ({ fullName, socialLinks, role }: ICard) => {
+  const handleSocialSite = (website: string) => {
+    const url = socialLinks.find((link) => link.name === website)?.url;
+    window.open(url);
   };
   return (
     <Stack
@@ -55,14 +45,18 @@ const Card = ({
       <ImageWithTextWrapper>
         <img src={profile_picture} alt={fullName} />
         <Text>
-          <WorkSummary
-            fullName={fullName}
-            selfDescription={selfDescription}
-            experience={experience}
-          />
-          <Stack alignItems="center" marginTop={1}>
-            <IconButton onClick={moveToLinkedIn}>
+          <WorkSummary fullName={fullName} role={role} />
+          <Stack
+            alignItems="center"
+            marginTop={1}
+            direction="row"
+            justifyContent="center"
+          >
+            <IconButton onClick={() => handleSocialSite("linkedin")}>
               <LinkedInIcon htmlColor="white" sx={{ fontSize: "2rem" }} />
+            </IconButton>
+            <IconButton onClick={() => handleSocialSite("github")}>
+              <GitHubIcon htmlColor="white" sx={{ fontSize: "2rem" }} />
             </IconButton>
           </Stack>
         </Text>
