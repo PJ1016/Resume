@@ -2,8 +2,12 @@ import React from "react";
 import { Paper, Stack, Typography, Grid } from "@mui/material";
 import VerifiedText from "../skills/VerifiedText";
 import { Animation } from "../../components/Animation";
+import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 interface ISkills {
-  skillSet: { title: string; skills: string[] }[];
+  skillSet: {
+    title: string;
+    skills: { title: string; icon?: IconDefinition; svg?: any }[];
+  }[];
 }
 const Skills = ({ skillSet }: ISkills) => {
   return (

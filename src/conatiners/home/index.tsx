@@ -4,7 +4,10 @@ import Card from "../card";
 import CollegeInfo from "../collegeInfo";
 import Experience from "../experience";
 import Skills from "../skills";
-
+import {
+  backEndSkills,
+  frontEndSkills,
+} from "../../conatiners/skills/skillsData";
 const Home = () => {
   return (
     <Stack>
@@ -26,20 +29,11 @@ const Home = () => {
         skillSet={[
           {
             title: "Frontend Technologies",
-            skills: [
-              "React JS",
-              "Redux",
-              "React Query",
-              "React Forms",
-              "Styled Components",
-              "Typescript",
-              "Jest",
-              "Cypress",
-            ],
+            skills: frontEndSkills,
           },
           {
             title: "Backend Stack and Tools",
-            skills: ["Python", "SQL", "Git", "Version-one / JIRA"],
+            skills: backEndSkills,
           },
         ]}
       />

@@ -6,6 +6,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import WorkSummary from "../card/WorkSummary";
 import profile_picture from "../../profile_picture.png";
 import { fadeDown } from "../../components/Animation";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const ImageWithTextWrapper = styled.div`
   position: relative;
@@ -17,7 +18,7 @@ const Text = styled.span`
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  width: 100%;
+  width: max-content;
   height: 50%;
   font-size: 1rem;
   padding: 2rem;
@@ -31,6 +32,8 @@ interface ICard {
   socialLinks: { name: string; url: string }[];
   role: string;
 }
+// @ts-ignore
+const myIcon: IconProp = ["kit", "fa-brands fa-python"];
 const Card = ({ fullName, socialLinks, role }: ICard) => {
   const handleSocialSite = (website: string) => {
     const url = socialLinks.find((link) => link.name === website)?.url;
@@ -53,6 +56,7 @@ const Card = ({ fullName, socialLinks, role }: ICard) => {
             justifyContent="center"
           >
             <IconButton onClick={() => handleSocialSite("linkedin")}>
+              <FontAwesomeIcon icon={myIcon} />
               <LinkedInIcon htmlColor="white" sx={{ fontSize: "2rem" }} />
             </IconButton>
             <IconButton onClick={() => handleSocialSite("github")}>
