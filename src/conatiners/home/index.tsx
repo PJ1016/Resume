@@ -13,7 +13,7 @@ const Home = () => {
     <Stack>
       <Card
         fullName="Praveen jayanth"
-        role="Application Devolopment Analyst"
+        role="Application Development Analyst"
         socialLinks={[
           {
             name: "github",

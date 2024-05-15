@@ -20,7 +20,7 @@ const CompanyWithExp = ({
 }: ICompanyWithExp) => {
   return (
     <Box alignItems="center" justifyContent="center" paddingX={6}>
-      <Stack direction="row" justifyContent="space-between" padding={2}>
+      <Stack direction={{ xs: "column", md: "row" }} padding={2}>
         <CompanyInfo
           companyDescription={companyDescription}
           src={src}

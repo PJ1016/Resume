@@ -22,10 +22,10 @@ const CollegeInfo = ({ branch, college }: ICollegeInfo) => {
         width="30rem"
         style={{ backgroundColor: "white" }}
       />
-      <Typography fontWeight="bold" fontSize="2rem">
+      <Typography fontWeight="bold" fontSize="2rem" textAlign="center">
         {branch}
       </Typography>
-      <Typography fontWeight="bold" fontSize="1rem">
+      <Typography fontWeight="bold" fontSize="1rem" textAlign="center">
         {college}
       </Typography>
     </Stack>

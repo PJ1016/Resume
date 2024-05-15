@@ -13,10 +13,10 @@ const ExperienceText = ({ range, role, description }: IExperience) => {
         <Typography fontStyle="italic" fontSize="1.8rem">
           {range}
         </Typography>
-        <Typography fontWeight="bold" fontSize="1.2rem">
+        <Typography fontWeight="bold" fontSize={{ xs: "0.7rem", md: "1.2rem" }}>
           {role}
         </Typography>
-        <Typography fontSize="12px" width="50%">
+        <Typography fontSize="0.7rem" color="#6c757d">
           Leading a tier-1 team within Amazon Ads responsible for logging all ad
           events for Amazon.com and its owned and operated properties,
           world-wide and in real-time for budgeting, billing, reporting and

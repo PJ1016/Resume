@@ -19,7 +19,6 @@ const CompanyInfo = ({ src, companyDescription, imageWidth }: IComapnyInfo) => {
         textAlign="center"
         color="#6c757d"
         marginTop={2}
-        width="50%"
       >
         {companyDescription}
       </Typography>
