@@ -1,16 +1,17 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./conatiners/home";
-const router = createBrowserRouter([
-  {
-    path: "/Resume/",
-    element: <Home />,
-  },
-  {
-    path: "/",
-    element: <Home />,
-  },
-]);
+const isProduction = process.env.NODE_ENV === "production";
+const basename = isProduction ? "/Resume" : "/";
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <Home />,
+    },
+  ],
+  { basename }
+);
 function App() {
   return <RouterProvider router={router} />;
 }
