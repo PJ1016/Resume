@@ -4,7 +4,7 @@ import cna from "../../CNA.jpg";
 import CompanyWithExp from "./companyWithExp";
 const Experience = () => {
   return (
-    <Box style={{ backgroundColor: "white" }}>
+    <Box>
       <Stack alignItems="center" justifyContent="center">
         <Typography fontSize="1.5rem" marginTop={3}>
           2+ Years React Experience for different clients
