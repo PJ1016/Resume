@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./conatiners/home";
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/Resume/",
     element: <Home />,
   },
 ]);
