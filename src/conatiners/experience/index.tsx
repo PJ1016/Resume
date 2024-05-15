@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Divider, Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import cna from "../../CNA.jpg";
 import CompanyWithExp from "./companyWithExp";
 const Experience = () => {
