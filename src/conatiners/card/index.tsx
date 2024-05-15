@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Stack, IconButton } from "@mui/material";
+import { Stack, IconButton, Button } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import WorkSummary from "../card/WorkSummary";
@@ -39,6 +39,25 @@ const Card = ({ fullName, socialLinks, role }: ICard) => {
     const url = socialLinks.find((link) => link.name === website)?.url;
     window.open(url);
   };
+  const handleDownload = () => {
+    // Replace 'your_file_name.extension' with the actual name of your file
+    const fileName = "CNA.jpg";
+
+    // Create a link element
+    const link = document.createElement("a");
+
+    // Set the download attribute to force download
+    link.setAttribute("download", "./../../CNA.jpg");
+
+    // Append the link to the body
+    document.body.appendChild(link);
+
+    // Programmatically click the link to trigger download
+    link.click();
+
+    // Clean up
+    document.body.removeChild(link);
+  };
   return (
     <Stack
       alignItems="center"
@@ -49,6 +68,17 @@ const Card = ({ fullName, socialLinks, role }: ICard) => {
         <img src={profile_picture} alt={fullName} />
         <Text>
           <WorkSummary fullName={fullName} role={role} />
+
+          <Stack
+            alignItems="center"
+            marginTop={1}
+            direction="row"
+            justifyContent="center"
+          >
+            <Button color="info" variant="contained" onClick={handleDownload}>
+              Download Resume
+            </Button>
+          </Stack>
           <Stack
             alignItems="center"
             marginTop={1}
