@@ -59,11 +59,7 @@ const Card = ({ fullName, socialLinks, role }: ICard) => {
     document.body.removeChild(link);
   };
   return (
-    <Stack
-      alignItems="center"
-      style={{ backgroundColor: "#CCC" }}
-      marginBottom={2}
-    >
+    <Stack alignItems="center" marginBottom={2}>
       <ImageWithTextWrapper>
         <img src={profile_picture} alt={fullName} />
         <Text>
