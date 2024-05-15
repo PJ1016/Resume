@@ -25,6 +25,8 @@ const Home = () => {
           },
         ]}
       />
+
+      <Experience />
       <Skills
         skillSet={[
           {
@@ -37,8 +39,6 @@ const Home = () => {
           },
         ]}
       />
-      <Experience />
-
       <CollegeInfo
         branch="Computer Science and Engineering"
         college="Rajiv Gandhi University of Knowledge Technologies, Basar"

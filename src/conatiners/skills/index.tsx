@@ -21,10 +21,10 @@ const Skills = ({ skillSet }: ISkills) => {
           "& > :not(style)": {
             m: 1,
             width: "100%",
-            backgroundColor: "linen",
+            backgroundColor: "whitesmoke",
             color: "#333333",
           },
-          backgroundColor: "white",
+          backgroundColor: "cornflowerblue",
         }}
       >
         {skillSet.map((item) => (
