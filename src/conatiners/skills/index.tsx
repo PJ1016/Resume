@@ -15,15 +15,15 @@ const Skills = ({ skillSet }: ISkills) => {
       <Stack
         direction={{ xs: "column", sm: "row" }}
         spacing={{ xs: 1, sm: 2, md: 4 }}
-        padding={3}
         justifyContent="space-around"
         sx={{
           "& > :not(style)": {
             m: 1,
             width: "100%",
-            backgroundColor: "whitesmoke",
+            backgroundColor: "white",
             color: "#333333",
           },
+          margin: "1rem 0",
           backgroundColor: "cornflowerblue",
         }}
       >
